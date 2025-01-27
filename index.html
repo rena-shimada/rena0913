@@ -8,14 +8,19 @@
 </head>
 <body>
     <header>
-        <h1>島田　怜奈</h1>
+        <h1>Rena Shimada</h1>
+
+    </header>
+    
+    <section-wrap>
+    <section id="profile">
         <h2>プロフィール</h2>
+        <p>名前：島田 怜奈</p>
         <p>生年月日：2000年09月13日</p>
         <p>血液型：A</p>
         <p>好きな食べ物：じゃがいも</p>
         <P>趣味：編み物</P>
-    </header>
-    
+    </section>
     <section id="ryakureki">
 		<h2>略歴</h2>
 		<p>2016年4月　埼玉県立川越南高校　入学</p>
@@ -41,26 +46,32 @@
         <!-- 他のプロジェクトも同様に追加 -->
     </section>
     <section id="skills">
-        <h2>スキルやサービス</h2>
+        <h2>スキル</h2>
         <ul>
-            <li>HTML5</li>
-            <li>CSS3 & Sass</li>
-            <li>JavaScript & React</li>
-            <li>UI/UXデザイン</li>
-            <li>レスポンシブデザイン</li>
+            <li>Excel：入力、基本関数、グラフ作成</li>
+            <li>Word：文字入力、書式変更</li>
+            <li>PowerPoint：基本的なスライドの入力作成</li>
+            <li>jwcad：2D図面作成</li>
+            <li>Photoshop：画像編集</li>
+            <li>SketchUp：3D図面作成</li>
         </ul>
     </section>
     <section id="contact">
         <h2>お問い合わせ</h2>
         <form>
-            <label for="name">名前:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">メールアドレス:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">メッセージ:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">送信</button>
+            <form action="contact.php" method="POST">
+                <label for="name">名前:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">メッセージ:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">送信</button>
+            </form>
+            
         </form>
     </section>
+</section>
+
 </body>
 </html>
