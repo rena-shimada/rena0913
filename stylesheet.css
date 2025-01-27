@@ -7,18 +7,20 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: rgb(0, 0, 0);
+    color: rgb(0, 128, 192);
     padding: 1rem;
     text-align: center;
+    margin: auto;
 }
 
 section {
     padding: 2rem;
-    margin: 1rem;
+    margin: auto;
 }
 
 h2 {
+	 margin: auto;
     border-bottom: 2px solid #333;
     padding-bottom: 0.5rem;
 }
@@ -29,12 +31,14 @@ form label, form input, form textarea {
 }
 
 form input, form textarea {
+	 margin: auto;
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
 }
 
 form button {
+	 margin: auto;
     background: #333;
     color: #fff;
     padding: 0.5rem 1rem;
