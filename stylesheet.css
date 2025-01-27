@@ -1,47 +1,64 @@
-@charset "UTF-8";
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* かわいらしいフォントスタイルに変更 */
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    color: #333; /* 文字色を落ち着いた色に設定 */
+    background-color: #F0F8FF; /* 背景色を淡いブルーに設定 */
 }
 
 header {
-    background: rgb(0, 0, 0);
-    color: rgb(0, 128, 192);
+    background: #4682B4; /* ヘッダーの背景色をスティールブルーに設定 */
+    color: #fff; /* ヘッダーの文字色を白に設定 */
     padding: 1rem;
     text-align: center;
-    margin: auto;
+    border-bottom: 2px solid #5F9EA0; /* ヘッダーのボーダーを追加 */
 }
+
+
 
 section {
     padding: 2rem;
-    margin: auto;
+    margin: 1rem;
+    color: #333; /* セクションの文字色を落ち着いた色に設定 */
+    background-color: #E6E6FA; /* セクション背景色を淡いラベンダーに設定 */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* 左右の余白を追加 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
 }
 
 h2 {
-	 margin: auto;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #5F9EA0; /* 見出しのボーダーをスティールブルーに設定 */
     padding-bottom: 0.5rem;
+    color: #333; /* 見出しの文字色を落ち着いた色に設定 */
 }
 
 form label, form input, form textarea {
     display: block;
     margin-bottom: 0.5rem;
+    color: #333; /* フォームの文字色を落ち着いた色に設定 */
 }
 
 form input, form textarea {
-	 margin: auto;
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
+    border: 2px solid #5F9EA0; /* フォームのボーダーをスティールブルーに設定 */
+    border-radius: 5px; /* 角を丸くする */
 }
 
 form button {
-	 margin: auto;
-    background: #333;
+    background: #5F9EA0; /* ボタンの背景色をスティールブルーに設定 */
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
+    border-radius: 5px; /* 角を丸くする */
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #4682B4; /* ホバー時のボタン背景色をスティールブルーに設定 */
 }
