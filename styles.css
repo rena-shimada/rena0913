@@ -15,8 +15,6 @@ header {
     border-bottom: 2px solid #5F9EA0; /* ヘッダーのボーダーを追加 */
 }
 
-
-
 section {
     padding: 2rem;
     margin: 1rem;
@@ -61,4 +59,22 @@ form button {
 
 form button:hover {
     background: #4682B4; /* ホバー時のボタン背景色をスティールブルーに設定 */
+}
+/* スマホ用のスタイル */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+        background-color: #F0F8FF; /* 背景色を淡いブルーに設定 */
+    }
+    header {
+        font-size: 18px;
+    }
+    section {
+        padding: 1rem;
+        width: 90%; /* セクションの幅をスマホ向けに調整 */
+    }
+}
+section {
+    width: 100%;
+    padding: 1rem;
 }
