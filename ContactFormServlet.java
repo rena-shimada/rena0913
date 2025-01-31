@@ -21,12 +21,12 @@ public class ContactFormServlet extends HttpServlet {
         String email = request.getParameter("email");
         String message = request.getParameter("message");
 
-        String recipient = iogkb82225@yahoo.co.jp; // ここにあなたのメールアドレスを入力
+        String recipient = "iogkb82225@yahoo.co.jp"; // ここにあなたのYahooメールアドレスを入力
 
         // メール送信設定
-        String host = "smtp.example.com"; // SMTPサーバーのアドレス
-        final String username = "your-email@example.com"; // ここにSMTP認証用のユーザー名を入力
-        final String password = "your-email-password"; // ここにSMTP認証用のパスワードを入力
+        String host = "smtp.mail.yahoo.com";
+        final String username = "iogkb82225@yahoo.co.jp"; // ここにあなたのYahooメールアドレスを入力
+        final String password = "Mnbvcxz0192"; // ここにあなたのYahooメールパスワードを入力
 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
