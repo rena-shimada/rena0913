@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <title>島田怜奈</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Rena Shimada</h1>
     </header>
     
-    <section>
-
         <section id="plofile">
             <h2>島田 怜奈</h2>
             <p>生年月日：2000年09月13日</p>
@@ -47,6 +49,99 @@
             </ul>
         </section>
 
+        <section>
+            <h2>備考</h2>
+            <ul>
+                <li>2015年：全日本吹奏楽コンクール金賞受賞</li>
+                <li>2018年：西関東吹奏楽コンクール金賞受賞</li>
+                <li>2019年07月～08月：専門学校の特待生としてHOPE大学へ短期留学（修了）</li>
+                <li>2024年10月～12月：ZeroPlusGateにてHTML、CSS、JavaScript、WordPressコースを受講（修了）</li>
+                <li>2024年12月～現在：東京都デジタル人材育成支援事業プログラミング・JAVAコース受講中</li>
+            </ul>
+        </section>
+        
+        <section id="denntaku">
+        <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operator = document.getElementById("operator").value;
+            let result = 0;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 != 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert("ゼロで除算することはできません。");
+                        return;
+                    }
+                    break;
+                default:
+                    alert("無効な演算子です。");
+                    return;
+            }
+
+            document.getElementById("calcResult").innerText = "結果: " + result;
+        }
+    </script>
+</head>
+<body>
+    <h2>電卓</h2>
+    <p>1番目の数値を入力してください:</p>
+    <input type="number" id="num1">
+    <p>2番目の数値を入力してください:</p>
+    <input type="number" id="num2">
+    <p>演算子を選んでください (+, -, *, /):</p>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button onclick="calculate()">計算する</button>
+    <p id="calcResult"></p>
+        </section>
+
+        <section id="suujiate">
+            <script>
+                let numberToGuess = Math.floor(Math.random() * 100) + 1;
+                let numberOfTries = 0;
+        
+                function guessNumber() {
+                    let userGuess = parseInt(document.getElementById("userGuess").value);
+                    numberOfTries++;
+                    let message = "";
+        
+                    if (userGuess < numberToGuess) {
+                        message = "小さすぎます。";
+                    } else if (userGuess > numberToGuess) {
+                        message = "大きすぎます。";
+                    } else {
+                        message = "正解です！" + numberOfTries + "回目で当たりました。";
+                    }
+        
+                    document.getElementById("result").innerText = message;
+                }
+            </script>
+        </head>
+        <body>
+            <h2>数字当てゲーム</h2>
+            <p>1から100の間の数値を入力してください:</p>
+            <input type="number" id="userGuess" min="1" max="100">
+            <button onclick="guessNumber()">推測する</button>
+            <p id="result"></p>
+        </section>
+
         <section id="contact">
             <h2>お問い合わせ</h2>
             <form action="contact.php" method="POST">
@@ -59,6 +154,6 @@
                 <button type="submit">送信</button>
             </form>
         </section>
-    </section>
+
 </body>
 </html>
