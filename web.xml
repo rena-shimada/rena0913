@@ -1,0 +1,16 @@
+<web-app>
+    <servlet>
+        <servlet-name>ContactFormServlet</servlet-name>
+        <servlet-class>ContactFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactFormServlet</servlet-name>
+        <url-pattern>/submit_form</url-pattern>
+    </servlet-mapping>
+</web-app>
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+
